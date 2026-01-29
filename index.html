@@ -1,0 +1,1363 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nanda Surya - Full-Stack Software Engineer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="bg-black">
+    <div class="particles" id="particles"></div>
+    <div
+      id="mobileNav"
+      class="mobile-nav fixed inset-0 z-50 bg-black/95 backdrop-blur-xl flex flex-col items-center justify-center"
+    >
+      <button
+        id="closeMobileNav"
+        class="absolute top-6 right-6 text-2xl text-gray-300 hover:text-white"
+      >
+        <i class="fas fa-times"></i>
+      </button>
+      <div class="flex flex-col items-center space-y-8">
+        <a
+          href="#about"
+          class="text-2xl text-gray-300 hover:text-white transition-colors duration-300 mobile-nav-link"
+          onclick="closeMobileMenu()"
+        >
+          About
+        </a>
+        <a
+          href="#skills"
+          class="text-2xl text-gray-300 hover:text-white transition-colors duration-300 mobile-nav-link"
+          onclick="closeMobileMenu()"
+        >
+          Skills
+        </a>
+        <a
+          href="#experience"
+          class="text-2xl text-gray-300 hover:text-white transition-colors duration-300 mobile-nav-link"
+          onclick="closeMobileMenu()"
+        >
+          Experience
+        </a>
+        <a
+          href="#projects"
+          class="text-2xl text-gray-300 hover:text-white transition-colors duration-300 mobile-nav-link"
+          onclick="closeMobileMenu()"
+        >
+          Projects
+        </a>
+        <a
+          href="#cv"
+          class="text-2xl text-gray-300 hover:text-white transition-colors duration-300 mobile-nav-link"
+          onclick="closeMobileMenu()"
+        >
+          CV
+        </a>
+        <a
+          href="#contact"
+          class="text-2xl text-gray-300 hover:text-white transition-colors duration-300 mobile-nav-link"
+          onclick="closeMobileMenu()"
+        >
+          Contact
+        </a>
+        <div class="flex space-x-6 mt-8">
+          <a
+            href="#"
+            class="text-gray-300 hover:text-white transition-colors duration-300"
+          >
+            <i class="fab fa-linkedin text-2xl"></i>
+          </a>
+          <a
+            href="#"
+            class="text-gray-300 hover:text-white transition-colors duration-300"
+          >
+            <i class="fab fa-github text-2xl"></i>
+          </a>
+          <a
+            href="#"
+            class="text-gray-300 hover:text-white transition-colors duration-300"
+          >
+            <i class="fab fa-twitter text-2xl"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav
+      class="fixed w-full z-40 py-4 px-4 sm:px-6 glass-effect-dark page-load safe-top"
+    >
+      <div class="max-w-7xl mx-auto flex justify-between items-center">
+        <a
+          href="#"
+          class="text-xl sm:text-2xl font-bold tracking-tight hover:scale-105 transition-transform duration-300 touch-button"
+        >
+          <span class="gradient-text">Nanda</span
+          ><span class="text-white">Surya</span>
+        </a>
+        <div class="hidden md:flex space-x-6 lg:space-x-8">
+          <a
+            href="#about"
+            class="text-gray-300 hover:text-white transition-all duration-300 relative group touch-button"
+          >
+            <span class="text-sm lg:text-base">About</span>
+            <span
+              class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 group-hover:w-full transition-all duration-300"
+            ></span>
+          </a>
+          <a
+            href="#skills"
+            class="text-gray-300 hover:text-white transition-all duration-300 relative group touch-button"
+          >
+            <span class="text-sm lg:text-base">Skills</span>
+            <span
+              class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-500 to-pink-500 group-hover:w-full transition-all duration-300"
+            ></span>
+          </a>
+          <a
+            href="#experience"
+            class="text-gray-300 hover:text-white transition-all duration-300 relative group touch-button"
+          >
+            <span class="text-sm lg:text-base">Experience</span>
+            <span
+              class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-pink-500 to-blue-500 group-hover:w-full transition-all duration-300"
+            ></span>
+          </a>
+          <a
+            href="#projects"
+            class="text-gray-300 hover:text-white transition-all duration-300 relative group touch-button"
+          >
+            <span class="text-sm lg:text-base">Projects</span>
+            <span
+              class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-pink-500 group-hover:w-full transition-all duration-300"
+            ></span>
+          </a>
+          <a
+            href="#cv"
+            class="text-gray-300 hover:text-white transition-all duration-300 relative group touch-button"
+          >
+            <span class="text-sm lg:text-base">CV</span>
+            <span
+              class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-500 to-blue-500 group-hover:w-full transition-all duration-300"
+            ></span>
+          </a>
+          <a
+            href="#contact"
+            class="text-gray-300 hover:text-white transition-all duration-300 relative group touch-button"
+          >
+            <span class="text-sm lg:text-base">Contact</span>
+            <span
+              class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-green-500 group-hover:w-full transition-all duration-300"
+            ></span>
+          </a>
+        </div>
+        <button
+          id="openMobileNav"
+          class="md:hidden text-gray-300 hover:text-white transition-colors duration-300 touch-button"
+        >
+          <i class="fas fa-bars text-xl"></i>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Header / Hero -->
+    <header
+      class="min-h-screen flex flex-col justify-center items-center text-center px-4 sm:px-6 pt-16 safe-top relative overflow-hidden"
+    >
+      <div class="absolute inset-0 liquid-gradient"></div>
+      <div class="relative z-10 max-w-4xl mx-auto mt-10 w-full">
+        <div
+          class="glass-effect w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 rounded-full mx-auto mb-6 md:mb-8 flex items-center justify-center float-animation page-load"
+        >
+          <div class="w-[88%] h-[88%] rounded-full overflow-hidden">
+            <img
+              src="profile.png"
+              alt="Profile Photo"
+              class="w-full h-full object-cover hover:scale-110 transition-transform duration-700"
+            />
+          </div>
+        </div>
+        <h1
+          class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-3 md:mb-4 page-load"
+        >
+          <span class="gradient-text">Nanda Surya</span>
+        </h1>
+        <p
+          class="text-xl sm:text-2xl md:text-3xl text-gray-300 mb-4 md:mb-6 page-load"
+          style="animation-delay: 0.2s"
+        >
+          <span class="typewriter">Full-Stack Software Engineer</span>
+        </p>
+        <p
+          class="text-base sm:text-lg md:text-xl text-gray-400 mb-8 md:mb-10 px-2 page-load"
+          style="animation-delay: 0.4s"
+        >
+          Specializing in scalable, maintainable full-stack systems with 6+
+          years of experience in JavaScript/TypeScript architectures, Golang
+          microservices, and cloud-native solutions.
+        </p>
+        <div
+          class="flex flex-col sm:flex-row justify-center gap-4 px-4 page-load"
+          style="animation-delay: 0.6s"
+        >
+          <a
+            href="#projects"
+            class="glass-effect px-6 py-3 md:px-8 md:py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300 group hover:scale-105 touch-button mobile-full text-center"
+          >
+            <i
+              class="fas fa-code mr-2 group-hover:rotate-12 transition-transform"
+            ></i
+            >View Projects
+          </a>
+          <a
+            href="#cv"
+            class="bg-gradient-to-r from-blue-500 to-purple-500 px-6 py-3 md:px-8 md:py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-600 transition-all duration-300 group hover:scale-105 shimmer-btn touch-button mobile-full text-center"
+          >
+            <i
+              class="fas fa-file-alt mr-2 group-hover:scale-110 transition-transform"
+            ></i
+            >View CV
+          </a>
+        </div>
+        <div
+          class="flex justify-center gap-4 md:gap-8 mt-12 md:mt-16 page-load"
+          style="animation-delay: 0.8s"
+        >
+          <a
+            href="https://www.linkedin.com/in/nswj/"
+            class="glass-effect w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center hover:bg-white/10 transition-all duration-300 hover:scale-110 touch-button"
+          >
+            <i class="fab fa-linkedin text-lg md:text-xl"></i>
+          </a>
+          <a
+            href="https://github.com/nandasurya23"
+            class="glass-effect w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center hover:bg-white/10 transition-all duration-300 hover:scale-110 touch-button"
+          >
+            <i class="fab fa-github text-lg md:text-xl"></i>
+          </a>
+          <a
+            href="mailto:nandasurya678@gmail.com"
+            class="glass-effect w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center hover:bg-white/10 transition-all duration-300 hover:scale-110 touch-button"
+          >
+            <i class="fas fa-envelope text-lg md:text-xl"></i>
+          </a>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="mt-16 md:mt-20 scroll-indicator">
+          <a
+            href="#about"
+            class="text-gray-400 hover:text-white transition-colors duration-300 touch-button"
+          >
+            <i class="fas fa-chevron-down text-xl md:text-2xl"></i>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- About Me -->
+    <section id="about" class="py-16 md:py-24 px-4 sm:px-6 max-w-5xl mx-auto">
+      <h2
+        class="text-3xl sm:text-4xl md:text-4xl font-bold mb-10 md:mb-16 text-center section-entrance"
+      >
+        <span class="gradient-text">About Me</span>
+      </h2>
+      <div
+        class="glass-effect rounded-2xl p-6 md:p-8 card-entrance"
+        style="animation-delay: 0.2s"
+      >
+        <div class="grid md:grid-cols-2 gap-6 md:gap-8">
+          <div>
+            <h3
+              class="text-xl md:text-2xl font-bold mb-3 md:mb-4 text-blue-300 pulse-animation"
+            >
+              My Journey
+            </h3>
+            <p class="text-gray-300 leading-relaxed text-sm md:text-base mb-4">
+              I began my career as a Web Application Engineer, focusing on
+              frontend development and API integration for high-traffic
+              educational platforms, working closely with backend and product
+              teams.
+            </p>
+            <p class="text-gray-300 leading-relaxed text-sm md:text-base mb-4">
+              I expanded into Data Research & Development, supporting academic
+              and business teams by processing and analyzing data using SQL,
+              Python, and various databases to drive product decisions.
+            </p>
+            <p class="text-gray-300 leading-relaxed text-sm md:text-base">
+              Since 2020, I've been delivering end-to-end web solutions as a
+              Freelance Full-Stack Developer, working across the JavaScript
+              ecosystem with Golang for backend services.
+            </p>
+          </div>
+          <div>
+            <h3
+              class="text-xl md:text-2xl font-bold mb-3 md:mb-4 text-purple-300 pulse-animation"
+            >
+              Philosophy
+            </h3>
+            <p
+              class="text-gray-300 leading-relaxed text-sm md:text-base mb-4 md:mb-6"
+            >
+              I believe in building systems that are not only technically
+              excellent but also deliver tangible business value. My focus is on
+              creating maintainable, scalable solutions that stand the test of
+              time.
+            </p>
+            <div class="space-y-3 md:space-y-4">
+              <div
+                class="flex items-center hover:translate-x-2 transition-transform duration-300"
+              >
+                <div
+                  class="w-3 h-3 rounded-full bg-blue-500 mr-3 timeline-dot"
+                ></div>
+                <span class="text-gray-300 text-sm md:text-base"
+                  >Clean, maintainable code architecture</span
+                >
+              </div>
+              <div
+                class="flex items-center hover:translate-x-2 transition-transform duration-300"
+                style="animation-delay: 0.1s"
+              >
+                <div
+                  class="w-3 h-3 rounded-full bg-purple-500 mr-3 timeline-dot"
+                ></div>
+                <span class="text-gray-300 text-sm md:text-base"
+                  >Scalable system design patterns</span
+                >
+              </div>
+              <div
+                class="flex items-center hover:translate-x-2 transition-transform duration-300"
+                style="animation-delay: 0.2s"
+              >
+                <div
+                  class="w-3 h-3 rounded-full bg-pink-500 mr-3 timeline-dot"
+                ></div>
+                <span class="text-gray-300 text-sm md:text-base"
+                  >Performance optimization focus</span
+                >
+              </div>
+              <div
+                class="flex items-center hover:translate-x-2 transition-transform duration-300"
+                style="animation-delay: 0.3s"
+              >
+                <div
+                  class="w-3 h-3 rounded-full bg-green-500 mr-3 timeline-dot"
+                ></div>
+                <span class="text-gray-300 text-sm md:text-base"
+                  >Collaborative team leadership</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tech Skills -->
+    <section
+      id="skills"
+      class="py-16 md:py-24 px-4 sm:px-6 bg-gradient-to-b from-black to-gray-900"
+    >
+      <div class="max-w-7xl mx-auto">
+        <h2
+          class="text-3xl sm:text-4xl md:text-4xl font-bold mb-10 md:mb-16 text-center section-entrance"
+        >
+          <span class="gradient-text">Technical Skills</span>
+        </h2>
+
+        <!-- Main Tech Categories - Responsive Grid -->
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-8 md:mb-12"
+        >
+          <!-- Frontend -->
+          <div
+            class="skill-bubble rounded-xl md:rounded-2xl p-4 md:p-6 card-entrance"
+          >
+            <div class="flex items-center mb-3 md:mb-4">
+              <div
+                class="w-10 h-10 md:w-12 md:h-12 rounded-lg bg-blue-500/20 flex items-center justify-center mr-3 md:mr-4 tech-icon"
+              >
+                <i class="fab fa-react text-xl md:text-2xl text-blue-400"></i>
+              </div>
+              <h3 class="text-lg md:text-xl font-bold">Frontend</h3>
+            </div>
+            <div class="space-y-2 md:space-y-3">
+              <div class="skill-item">
+                <div class="flex justify-between items-center mb-1">
+                  <span class="text-gray-300 text-sm md:text-base"
+                    >React.js</span
+                  >
+                  <span class="text-blue-400 font-bold text-sm md:text-base"
+                    >97%</span
+                  >
+                </div>
+                <div
+                  class="w-full bg-gray-800 rounded-full h-2 overflow-hidden"
+                >
+                  <div
+                    class="progress-bar bg-gradient-to-r from-blue-500 to-blue-600 h-2 rounded-full"
+                    style="--progress-width: 97%"
+                  ></div>
+                </div>
+              </div>
+
+              <div class="skill-item" style="animation-delay: 0.1s">
+                <div class="flex justify-between items-center mb-1">
+                  <span class="text-gray-300 text-sm md:text-base"
+                    >Next.js</span
+                  >
+                  <span class="text-blue-400 font-bold text-sm md:text-base"
+                    >97%</span
+                  >
+                </div>
+                <div
+                  class="w-full bg-gray-800 rounded-full h-2 overflow-hidden"
+                >
+                  <div
+                    class="progress-bar bg-gradient-to-r from-blue-500 to-blue-600 h-2 rounded-full"
+                    style="--progress-width: 97%"
+                  ></div>
+                </div>
+              </div>
+
+              <div class="skill-item" style="animation-delay: 0.2s">
+                <div class="flex justify-between items-center mb-1">
+                  <span class="text-gray-300 text-sm md:text-base"
+                    >TypeScript</span
+                  >
+                  <span class="text-blue-400 font-bold text-sm md:text-base"
+                    >97%</span
+                  >
+                </div>
+                <div
+                  class="w-full bg-gray-800 rounded-full h-2 overflow-hidden"
+                >
+                  <div
+                    class="progress-bar bg-gradient-to-r from-blue-500 to-blue-600 h-2 rounded-full"
+                    style="--progress-width: 97%"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Backend -->
+          <div
+            class="skill-bubble rounded-xl md:rounded-2xl p-4 md:p-6 card-entrance"
+            style="animation-delay: 0.1s"
+          >
+            <div class="flex items-center mb-3 md:mb-4">
+              <div
+                class="w-10 h-10 md:w-12 md:h-12 rounded-lg bg-green-500/20 flex items-center justify-center mr-3 md:mr-4 tech-icon"
+              >
+                <i class="fas fa-server text-xl md:text-2xl text-green-400"></i>
+              </div>
+              <h3 class="text-lg md:text-xl font-bold">Backend</h3>
+            </div>
+            <div class="space-y-2 md:space-y-3">
+              <div class="skill-item">
+                <div class="flex justify-between items-center mb-1">
+                  <span class="text-gray-300 text-sm md:text-base"
+                    >Node.js</span
+                  >
+                  <span class="text-green-400 font-bold text-sm md:text-base"
+                    >92%</span
+                  >
+                </div>
+                <div
+                  class="w-full bg-gray-800 rounded-full h-2 overflow-hidden"
+                >
+                  <div
+                    class="progress-bar bg-gradient-to-r from-green-500 to-green-600 h-2 rounded-full"
+                    style="--progress-width: 92%"
+                  ></div>
+                </div>
+              </div>
+
+              <div class="skill-item" style="animation-delay: 0.1s">
+                <div class="flex justify-between items-center mb-1">
+                  <span class="text-gray-300 text-sm md:text-base">Golang</span>
+                  <span class="text-green-400 font-bold text-sm md:text-base"
+                    >85%</span
+                  >
+                </div>
+                <div
+                  class="w-full bg-gray-800 rounded-full h-2 overflow-hidden"
+                >
+                  <div
+                    class="progress-bar bg-gradient-to-r from-green-500 to-green-600 h-2 rounded-full"
+                    style="--progress-width: 85%"
+                  ></div>
+                </div>
+              </div>
+
+              <div class="skill-item" style="animation-delay: 0.2s">
+                <div class="flex justify-between items-center mb-1">
+                  <span class="text-gray-300 text-sm md:text-base">Python</span>
+                  <span class="text-green-400 font-bold text-sm md:text-base"
+                    >80%</span
+                  >
+                </div>
+                <div
+                  class="w-full bg-gray-800 rounded-full h-2 overflow-hidden"
+                >
+                  <div
+                    class="progress-bar bg-gradient-to-r from-green-500 to-green-600 h-2 rounded-full"
+                    style="--progress-width: 80%"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Database -->
+          <div
+            class="skill-bubble rounded-xl md:rounded-2xl p-4 md:p-6 card-entrance"
+            style="animation-delay: 0.2s"
+          >
+            <div class="flex items-center mb-3 md:mb-4">
+              <div
+                class="w-10 h-10 md:w-12 md:h-12 rounded-lg bg-purple-500/20 flex items-center justify-center mr-3 md:mr-4 tech-icon"
+              >
+                <i
+                  class="fas fa-database text-xl md:text-2xl text-purple-400"
+                ></i>
+              </div>
+              <h3 class="text-lg md:text-xl font-bold">Database</h3>
+            </div>
+            <div class="space-y-2 md:space-y-3">
+              <div class="skill-item">
+                <div class="flex justify-between items-center mb-1">
+                  <span class="text-gray-300 text-sm md:text-base"
+                    >PostgreSQL</span
+                  >
+                  <span class="text-purple-400 font-bold text-sm md:text-base"
+                    >90%</span
+                  >
+                </div>
+                <div
+                  class="w-full bg-gray-800 rounded-full h-2 overflow-hidden"
+                >
+                  <div
+                    class="progress-bar bg-gradient-to-r from-purple-500 to-purple-600 h-2 rounded-full"
+                    style="--progress-width: 90%"
+                  ></div>
+                </div>
+              </div>
+
+              <div class="skill-item" style="animation-delay: 0.1s">
+                <div class="flex justify-between items-center mb-1">
+                  <span class="text-gray-300 text-sm md:text-base"
+                    >MongoDB</span
+                  >
+                  <span class="text-purple-400 font-bold text-sm md:text-base"
+                    >85%</span
+                  >
+                </div>
+                <div
+                  class="w-full bg-gray-800 rounded-full h-2 overflow-hidden"
+                >
+                  <div
+                    class="progress-bar bg-gradient-to-r from-purple-500 to-purple-600 h-2 rounded-full"
+                    style="--progress-width: 85%"
+                  ></div>
+                </div>
+              </div>
+
+              <div class="skill-item" style="animation-delay: 0.2s">
+                <div class="flex justify-between items-center mb-1">
+                  <span class="text-gray-300 text-sm md:text-base">Redis</span>
+                  <span class="text-purple-400 font-bold text-sm md:text-base"
+                    >82%</span
+                  >
+                </div>
+                <div
+                  class="w-full bg-gray-800 rounded-full h-2 overflow-hidden"
+                >
+                  <div
+                    class="progress-bar bg-gradient-to-r from-purple-500 to-purple-600 h-2 rounded-full"
+                    style="--progress-width: 82%"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- DevOps -->
+          <div
+            class="skill-bubble rounded-xl md:rounded-2xl p-4 md:p-6 card-entrance"
+            style="animation-delay: 0.3s"
+          >
+            <div class="flex items-center mb-3 md:mb-4">
+              <div
+                class="w-10 h-10 md:w-12 md:h-12 rounded-lg bg-orange-500/20 flex items-center justify-center mr-3 md:mr-4 tech-icon"
+              >
+                <i class="fas fa-cloud text-xl md:text-2xl text-orange-400"></i>
+              </div>
+              <h3 class="text-lg md:text-xl font-bold">DevOps</h3>
+            </div>
+            <div class="space-y-2 md:space-y-3">
+              <div class="skill-item">
+                <div class="flex justify-between items-center mb-1">
+                  <span class="text-gray-300 text-sm md:text-base">Docker</span>
+                  <span class="text-orange-400 font-bold text-sm md:text-base"
+                    >85%</span
+                  >
+                </div>
+                <div
+                  class="w-full bg-gray-800 rounded-full h-2 overflow-hidden"
+                >
+                  <div
+                    class="progress-bar bg-gradient-to-r from-orange-500 to-orange-600 h-2 rounded-full"
+                    style="--progress-width: 85%"
+                  ></div>
+                </div>
+              </div>
+
+              <div class="skill-item" style="animation-delay: 0.2s">
+                <div class="flex justify-between items-center mb-1">
+                  <span class="text-gray-300 text-sm md:text-base">CI/CD</span>
+                  <span class="text-orange-400 font-bold text-sm md:text-base"
+                    >82%</span
+                  >
+                </div>
+                <div
+                  class="w-full bg-gray-800 rounded-full h-2 overflow-hidden"
+                >
+                  <div
+                    class="progress-bar bg-gradient-to-r from-orange-500 to-orange-600 h-2 rounded-full"
+                    style="--progress-width: 82%"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tech Stack Grid - Responsive -->
+        <div
+          class="glass-effect rounded-xl md:rounded-2xl p-4 md:p-8 card-entrance"
+          style="animation-delay: 0.4s"
+        >
+          <h3
+            class="text-xl md:text-2xl font-bold mb-4 md:mb-6 text-center gradient-text"
+          >
+            Full Tech Stack
+          </h3>
+          <div
+            class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-8 gap-3 md:gap-4"
+          >
+            <!-- Tech stack items with staggered animation -->
+            <div
+              class="skill-bubble rounded-lg md:rounded-xl p-3 md:p-4 text-center tech-icon"
+              style="animation-delay: 0s"
+            >
+              <i
+                class="fab fa-react text-xl md:text-2xl text-blue-400 mb-1 md:mb-2"
+              ></i>
+              <p class="text-xs md:text-sm font-medium">React.js</p>
+            </div>
+            <div
+              class="skill-bubble rounded-lg md:rounded-xl p-3 md:p-4 text-center tech-icon"
+              style="animation-delay: 0.15s"
+            >
+              <i
+                class="fab fa-node-js text-xl md:text-2xl text-green-500 mb-1 md:mb-2"
+              ></i>
+              <p class="text-xs md:text-sm font-medium">Node.js</p>
+            </div>
+            <div
+              class="skill-bubble rounded-lg md:rounded-xl p-3 md:p-4 text-center tech-icon"
+              style="animation-delay: 0.2s"
+            >
+              <i
+                class="fab fa-golang text-xl md:text-2xl text-cyan-400 mb-1 md:mb-2"
+              ></i>
+              <p class="text-xs md:text-sm font-medium">Golang</p>
+            </div>
+            <div
+              class="skill-bubble rounded-lg md:rounded-xl p-3 md:p-4 text-center tech-icon"
+              style="animation-delay: 0.25s"
+            >
+              <i
+                class="fab fa-python text-xl md:text-2xl text-yellow-400 mb-1 md:mb-2"
+              ></i>
+              <p class="text-xs md:text-sm font-medium">Python</p>
+            </div>
+            <div
+              class="skill-bubble rounded-lg md:rounded-xl p-3 md:p-4 text-center tech-icon"
+              style="animation-delay: 0.3s"
+            >
+              <i
+                class="fas fa-database text-xl md:text-2xl text-purple-400 mb-1 md:mb-2"
+              ></i>
+              <p class="text-xs md:text-sm font-medium">PostgreSQL</p>
+            </div>
+            <div
+              class="skill-bubble rounded-lg md:rounded-xl p-3 md:p-4 text-center tech-icon"
+              style="animation-delay: 0.35s"
+            >
+              <i
+                class="fas fa-leaf text-xl md:text-2xl text-green-300 mb-1 md:mb-2"
+              ></i>
+              <p class="text-xs md:text-sm font-medium">MongoDB</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CV Section -->
+    <section id="cv" class="py-16 md:py-24 px-4 sm:px-6 max-w-5xl mx-auto">
+      <h2
+        class="text-3xl sm:text-4xl md:text-4xl font-bold mb-10 md:mb-16 text-center section-entrance"
+      >
+        <span class="gradient-text">Curriculum Vitae</span>
+      </h2>
+
+      <div class="grid md:grid-cols-2 gap-6 md:gap-8 mb-8 md:mb-12">
+        <!-- CV Card -->
+        <div class="cv-card glass-effect rounded-2xl p-6 md:p-8 card-entrance">
+          <div
+            class="flex flex-col sm:flex-row items-center sm:items-start mb-4 md:mb-6"
+          >
+            <div
+              class="cv-icon w-12 h-12 md:w-16 md:h-16 rounded-xl flex items-center justify-center mb-4 sm:mb-0 sm:mr-6"
+            >
+              <i class="fas fa-file-pdf text-2xl md:text-3xl text-blue-400"></i>
+            </div>
+            <div class="text-center sm:text-left">
+              <h3 class="text-xl md:text-2xl font-bold mb-1 md:mb-2">
+                Professional CV
+              </h3>
+              <p class="text-gray-400 text-sm md:text-base">
+                Updated: January 2026
+              </p>
+            </div>
+          </div>
+
+          <div class="space-y-3 md:space-y-4 mb-6 md:mb-8">
+            <div class="flex items-center">
+              <i
+                class="fas fa-check-circle text-green-400 mr-3 text-sm md:text-base"
+              ></i>
+              <span class="text-gray-300 text-sm md:text-base"
+                >6+ years of professional experience</span
+              >
+            </div>
+            <div class="flex items-center">
+              <i
+                class="fas fa-check-circle text-green-400 mr-3 text-sm md:text-base"
+              ></i>
+              <span class="text-gray-300 text-sm md:text-base"
+                >Full-stack development expertise</span
+              >
+            </div>
+            <div class="flex items-center">
+              <i
+                class="fas fa-check-circle text-green-400 mr-3 text-sm md:text-base"
+              ></i>
+              <span class="text-gray-300 text-sm md:text-base"
+                >Leadership & team management</span
+              >
+            </div>
+            <div class="flex items-center">
+              <i
+                class="fas fa-check-circle text-green-400 mr-3 text-sm md:text-base"
+              ></i>
+              <span class="text-gray-300 text-sm md:text-base"
+                >Cloud & DevOps proficiency</span
+              >
+            </div>
+          </div>
+
+          <div class="flex flex-col sm:flex-row gap-3 md:gap-4">
+            <a
+              href="cv.pdf"
+              target="_blank"
+              download="cv.pdf"
+              class="download-btn text-white font-semibold py-3 px-4 md:py-3 md:px-6 rounded-lg text-center transition-all duration-300 hover:shadow-lg touch-button"
+            >
+              <i class="fas fa-download mr-2"></i>Download CV (PDF)
+            </a>
+            <a
+              href="https://drive.google.com/file/d/10wvqotyqUt-2VhHBlLbLXg_bzIZNtTD3/view?usp=sharing"
+              target="_blank"
+              class="glass-effect text-gray-300 font-semibold py-3 px-4 md:py-3 md:px-6 rounded-lg text-center hover:bg-white/10 transition-all duration-300 touch-button"
+            >
+              <i class="fas fa-eye mr-2"></i>Preview Online
+            </a>
+          </div>
+        </div>
+
+        <!-- Resume Highlights -->
+        <div
+          class="glass-effect rounded-2xl p-6 md:p-8 card-entrance"
+          style="animation-delay: 0.1s"
+        >
+          <h3 class="text-xl md:text-2xl font-bold mb-4 md:mb-6 text-blue-300">
+            Career Highlights
+          </h3>
+
+          <div class="space-y-4 md:space-y-6">
+            <div class="flex">
+              <div class="flex-shrink-0 w-8 md:w-12">
+                <div
+                  class="w-3 h-3 rounded-full bg-blue-500 mt-1 md:mt-2"
+                ></div>
+              </div>
+              <div>
+                <h4 class="font-bold text-base md:text-lg mb-1">
+                  Lead Software Engineer
+                </h4>
+                <p class="text-gray-400 text-xs md:text-sm">
+                  UNKCODE • 2024 - Present
+                </p>
+                <p class="text-gray-300 mt-1 md:mt-2 text-sm md:text-base">
+                  Leading teams and architecting scalable solutions for
+                  enterprise clients.
+                </p>
+              </div>
+            </div>
+
+            <div class="flex">
+              <div class="flex-shrink-0 w-8 md:w-12">
+                <div
+                  class="w-3 h-3 rounded-full bg-green-500 mt-1 md:mt-2"
+                ></div>
+              </div>
+              <div>
+                <h4 class="font-bold text-base md:text-lg mb-1">
+                  Data Research & Development
+                </h4>
+                <p class="text-gray-400 text-xs md:text-sm">
+                  BTW Edutech • 2023 - 2024
+                </p>
+                <p class="text-gray-300 mt-1 md:mt-2 text-sm md:text-base">
+                  Data analysis and pipeline development for educational
+                  platforms.
+                </p>
+              </div>
+            </div>
+
+            <div class="flex">
+              <div class="flex-shrink-0 w-8 md:w-12">
+                <div
+                  class="w-3 h-3 rounded-full bg-purple-500 mt-1 md:mt-2"
+                ></div>
+              </div>
+              <div>
+                <h4 class="font-bold text-base md:text-lg mb-1">
+                  Web Application Engineer
+                </h4>
+                <p class="text-gray-400 text-xs md:text-sm">
+                  BTW Edutech • 2020 - 2022
+                </p>
+                <p class="text-gray-300 mt-1 md:mt-2 text-sm md:text-base">
+                  Started my engineering career as a frontend-focused web
+                  application engineer, contributing to the development and
+                  maintenance of internal and user-facing web platforms.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section
+      id="experience"
+      class="py-16 md:py-24 px-4 sm:px-6 max-w-5xl mx-auto"
+    >
+      <h2
+        class="text-3xl sm:text-4xl md:text-4xl font-bold mb-10 md:mb-16 text-center section-entrance"
+      >
+        <span class="gradient-text">Professional Experience</span>
+      </h2>
+
+      <div class="space-y-6 md:space-y-8">
+        <!-- UNKCODE -->
+        <div
+          class="glass-effect rounded-xl p-4 md:p-6 card-entrance hover:scale-[1.02] transition-transform duration-300"
+        >
+          <div class="flex flex-col mb-3 md:mb-4">
+            <div class="mb-2 md:mb-3">
+              <h3 class="text-xl md:text-2xl font-bold text-white mb-1">
+                Lead Software Engineer
+              </h3>
+              <div class="flex flex-wrap items-center gap-1 md:gap-2">
+                <span class="text-blue-300 font-medium text-sm md:text-base"
+                  >UNKCODE</span
+                >
+                <span class="text-gray-400 hidden md:inline">•</span>
+                <span class="text-gray-400 text-xs md:text-base"
+                  >Dec 2024 - Present</span
+                >
+                <span class="text-gray-400 hidden md:inline">•</span>
+                <span class="text-gray-400 text-xs md:text-base"
+                  >Bali, Indonesia</span
+                >
+              </div>
+            </div>
+            <span
+              class="inline-block bg-blue-500/20 text-blue-400 px-2 py-1 md:px-3 md:py-1 rounded-full text-xs md:text-sm font-medium md:mt-0 self-start"
+              >Hybrid</span
+            >
+          </div>
+          <p class="text-gray-300 text-sm md:text-base mb-3 md:mb-4">
+            Leading multiple end-to-end web application projects from planning
+            to production. Defining architecture and development standards
+            across frontend and backend, collaborating with clients, conducting
+            code reviews, and mentoring developers.
+          </p>
+          <div class="flex flex-wrap gap-1 md:gap-2">
+            <span
+              class="bg-blue-500/20 text-blue-300 px-2 py-1 rounded-full text-xs md:text-sm hover:scale-105 transition-transform"
+              >React.js</span
+            >
+            <span
+              class="bg-blue-600/20 text-blue-300 px-2 py-1 rounded-full text-xs md:text-sm hover:scale-105 transition-transform"
+              >Next.js</span
+            >
+            <span
+              class="bg-green-500/20 text-green-300 px-2 py-1 rounded-full text-xs md:text-sm hover:scale-105 transition-transform"
+              >Node.js</span
+            >
+            <span
+              class="bg-yellow-500/20 text-yellow-300 px-2 py-1 rounded-full text-xs md:text-sm hover:scale-105 transition-transform"
+              >Golang</span
+            >
+          </div>
+        </div>
+
+        <!-- Full Stack Engineer -->
+        <div
+          class="glass-effect rounded-xl p-4 md:p-6 card-entrance hover:scale-[1.02] transition-transform duration-300"
+        >
+          <div class="flex flex-col mb-3 md:mb-4">
+            <div class="mb-2 md:mb-3">
+              <h3 class="text-xl md:text-2xl font-bold text-white mb-1">
+                Full Stack Engineer
+              </h3>
+              <div class="flex flex-wrap items-center gap-1 md:gap-2">
+                <span class="text-blue-300 font-medium text-sm md:text-base"
+                  >Freelance</span
+                >
+                <span class="text-gray-400 hidden md:inline">•</span>
+                <span class="text-gray-400 text-xs md:text-base"
+                  >Jan 2020 - Present</span
+                >
+                <span class="text-gray-400 hidden md:inline">•</span>
+                <span class="text-gray-400 text-xs md:text-base">Remote</span>
+              </div>
+            </div>
+            <span
+              class="inline-block bg-blue-500/20 text-blue-400 px-2 py-1 md:px-3 md:py-1 rounded-full text-xs md:text-sm font-medium md:mt-0 self-start"
+              >Hybrid</span
+            >
+          </div>
+          <p class="text-gray-300 text-sm md:text-base mb-3 md:mb-4">
+            Worked as a freelance full-stack engineer delivering web
+            applications for various clients across different industries. Scope:
+            Developed and maintained full-stack web applications. Built frontend
+            using React.js / Next.js. Implemented backend services using
+            Node.js. Collaborated with clients to gather requirements and
+            deliver solutions.
+          </p>
+          <div class="flex flex-wrap gap-1 md:gap-2">
+            <span
+              class="bg-blue-500/20 text-blue-300 px-2 py-1 rounded-full text-xs md:text-sm hover:scale-105 transition-transform"
+              >Full-Stack Web Development</span
+            >
+            <span
+              class="bg-blue-600/20 text-blue-300 px-2 py-1 rounded-full text-xs md:text-sm hover:scale-105 transition-transform"
+              >Next.js</span
+            >
+            <span
+              class="bg-green-500/20 text-green-300 px-2 py-1 rounded-full text-xs md:text-sm hover:scale-105 transition-transform"
+              >Node.js</span
+            >
+            <span
+              class="bg-yellow-500/20 text-yellow-300 px-2 py-1 rounded-full text-xs md:text-sm hover:scale-105 transition-transform"
+              >REST API Development</span
+            >
+          </div>
+        </div>
+
+        <!-- Data Research and Development -->
+        <div
+          class="glass-effect rounded-xl p-4 md:p-6 card-entrance hover:scale-[1.02] transition-transform duration-300"
+          style="animation-delay: 0.1s"
+        >
+          <div class="flex flex-col mb-3 md:mb-4">
+            <div class="mb-2 md:mb-3">
+              <h3 class="text-xl md:text-2xl font-bold text-white mb-1">
+                Data Research and Development
+              </h3>
+              <div class="flex flex-wrap items-center gap-1 md:gap-2">
+                <span class="text-purple-300 font-medium text-sm md:text-base"
+                  >BTW Edutech</span
+                >
+                <span class="text-gray-400 hidden md:inline">•</span>
+                <span class="text-gray-400 text-xs md:text-base"
+                  >Feb 2023 - Jun 2024</span
+                >
+                <span class="text-gray-400 hidden md:inline">•</span>
+                <span class="text-gray-400 text-xs md:text-base"
+                  >Bali, Indonesia</span
+                >
+              </div>
+            </div>
+            <span
+              class="inline-block bg-purple-500/20 text-purple-400 px-2 py-1 md:px-3 md:py-1 rounded-full text-xs md:text-sm font-medium md:mt-0 self-start"
+              >Full-time</span
+            >
+          </div>
+          <p class="text-gray-300 text-sm md:text-base mb-3 md:mb-4">
+            Worked as part of the data research and development team, focusing
+            on data analysis and applied data science to support academic
+            content, product development, and marketing initiatives within the
+            government exam (CPNS) education domain.
+          </p>
+          <div class="flex flex-wrap gap-1 md:gap-2">
+            <span
+              class="bg-blue-500/20 text-blue-300 px-2 py-1 rounded-full text-xs md:text-sm hover:scale-105 transition-transform"
+              >Data Analysis</span
+            >
+            <span
+              class="bg-green-500/20 text-green-300 px-2 py-1 rounded-full text-xs md:text-sm hover:scale-105 transition-transform"
+              >Data-driven Decision Making</span
+            >
+            <span
+              class="bg-yellow-500/20 text-yellow-300 px-2 py-1 rounded-full text-xs md:text-sm hover:scale-105 transition-transform"
+              >Python</span
+            >
+            <span
+              class="bg-red-500/20 text-red-300 px-2 py-1 rounded-full text-xs md:text-sm hover:scale-105 transition-transform"
+              >Elasticsearch</span
+            >
+          </div>
+        </div>
+
+        <!-- Web Application Engineer -->
+        <div
+          class="glass-effect rounded-xl p-4 md:p-6 card-entrance hover:scale-[1.02] transition-transform duration-300"
+          style="animation-delay: 0.1s"
+        >
+          <div class="flex flex-col mb-3 md:mb-4">
+            <div class="mb-2 md:mb-3">
+              <h3 class="text-xl md:text-2xl font-bold text-white mb-1">
+                Web Application Engineer
+              </h3>
+              <div class="flex flex-wrap items-center gap-1 md:gap-2">
+                <span class="text-purple-300 font-medium text-sm md:text-base"
+                  >BTW Edutech</span
+                >
+                <span class="text-gray-400 hidden md:inline">•</span>
+                <span class="text-gray-400 text-xs md:text-base"
+                  >Mar 2020 - Apr 2022</span
+                >
+                <span class="text-gray-400 hidden md:inline">•</span>
+                <span class="text-gray-400 text-xs md:text-base"
+                  >Bali, Indonesia</span
+                >
+              </div>
+            </div>
+            <span
+              class="inline-block bg-purple-500/20 text-purple-400 px-2 py-1 md:px-3 md:py-1 rounded-full text-xs md:text-sm font-medium md:mt-0 self-start"
+              >Full-time</span
+            >
+          </div>
+          <p class="text-gray-300 text-sm md:text-base mb-3 md:mb-4">
+            Started my engineering career as a frontend-focused web application
+            engineer, contributing to the development and maintenance of
+            internal and user-facing web platforms.
+          </p>
+          <div class="flex flex-wrap gap-1 md:gap-2">
+            <span
+              class="bg-blue-500/20 text-blue-300 px-2 py-1 rounded-full text-xs md:text-sm hover:scale-105 transition-transform"
+              >Frontend Development</span
+            >
+            <span
+              class="bg-green-500/20 text-green-300 px-2 py-1 rounded-full text-xs md:text-sm hover:scale-105 transition-transform"
+              >JavaScript</span
+            >
+            <span
+              class="bg-yellow-500/20 text-yellow-300 px-2 py-1 rounded-full text-xs md:text-sm hover:scale-105 transition-transform"
+              >React.js</span
+            >
+            <span
+              class="bg-red-500/20 text-red-300 px-2 py-1 rounded-full text-xs md:text-sm hover:scale-105 transition-transform"
+              >Responsive Web Design</span
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section
+      id="projects"
+      class="py-16 md:py-24 px-4 sm:px-6 bg-gradient-to-b from-gray-900 to-black"
+    >
+      <div class="max-w-6xl mx-auto">
+        <h2
+          class="text-3xl sm:text-4xl md:text-4xl font-bold mb-10 md:mb-16 text-center section-entrance"
+        >
+          <span class="gradient-text">Featured Projects</span>
+        </h2>
+        <div class="grid md:grid-cols-2 gap-6 md:gap-8">
+          <div
+            class="glass-effect rounded-xl md:rounded-2xl p-4 md:p-8 card-entrance hover:scale-[1.02] transition-all duration-300 group"
+          >
+            <div
+              class="flex flex-col sm:flex-row sm:items-center justify-between mb-4 md:mb-6"
+            >
+              <h3
+                class="font-bold text-lg md:text-2xl group-hover:text-blue-300 transition-colors mb-2 sm:mb-0"
+              >
+                QR-Based Ordering & POS Platform
+              </h3>
+              <span
+                class="bg-blue-500/20 text-blue-400 px-2 py-1 md:px-3 md:py-1 rounded-full text-xs md:text-sm font-medium group-hover:scale-110 transition-transform self-start sm:self-center"
+                >UNKCODE</span
+              >
+            </div>
+            <p class="text-gray-400 text-xs md:text-sm mb-1 md:mb-2">
+              Oct 2025 - Present
+            </p>
+            <p class="text-gray-300 text-sm md:text-base mb-4 md:mb-6">
+              Modular QR-based ordering and POS platform integrating customer
+              ordering, cashier payments, kitchen management, and admin
+              analytics.
+            </p>
+            <div class="flex flex-wrap gap-1 md:gap-2 mb-4 md:mb-6">
+              <span
+                class="bg-blue-500/20 text-blue-300 px-2 py-1 rounded-full text-xs md:text-sm hover:scale-105 transition-transform"
+                >Next.js</span
+              >
+              <span
+                class="bg-blue-600/20 text-blue-300 px-2 py-1 rounded-full text-xs md:text-sm hover:scale-105 transition-transform"
+                >TypeScript</span
+              >
+              <span
+                class="bg-green-500/20 text-green-300 px-2 py-1 rounded-full text-xs md:text-sm hover:scale-105 transition-transform"
+                >Express.js</span
+              >
+            </div>
+            <a
+              href="alchemist-coffe.vercel.app"
+              class="inline-flex items-center text-blue-400 hover:text-blue-300 font-medium text-sm md:text-base group"
+            >
+              View Case Study
+              <i
+                class="fas fa-arrow-right ml-1 md:ml-2 group-hover:translate-x-1 md:group-hover:translate-x-2 transition-transform"
+              ></i>
+            </a>
+          </div>
+
+          <div
+            class="glass-effect rounded-xl md:rounded-2xl p-4 md:p-8 card-entrance hover:scale-[1.02] transition-all duration-300 group"
+            style="animation-delay: 0.1s"
+          >
+            <div
+              class="flex flex-col sm:flex-row sm:items-center justify-between mb-4 md:mb-6"
+            >
+              <h3
+                class="font-bold text-lg md:text-2xl group-hover:text-purple-300 transition-colors mb-2 sm:mb-0"
+              >
+                Enterprise Booking System
+              </h3>
+              <span
+                class="bg-purple-500/20 text-purple-400 px-2 py-1 md:px-3 md:py-1 rounded-full text-xs md:text-sm font-medium group-hover:scale-110 transition-transform self-start sm:self-center"
+                >Full-Stack</span
+              >
+            </div>
+            <p class="text-gray-400 text-xs md:text-sm mb-1 md:mb-2">
+              Next.js + Golang Microservices
+            </p>
+            <p class="text-gray-300 text-sm md:text-base mb-4 md:mb-6">
+              Complete booking system with user management, scheduling, payment
+              integration, and admin dashboard.
+            </p>
+            <div class="flex flex-wrap gap-1 md:gap-2 mb-4 md:mb-6">
+              <span
+                class="bg-blue-500/20 text-blue-300 px-2 py-1 rounded-full text-xs md:text-sm hover:scale-105 transition-transform"
+                >Next.js</span
+              >
+              <span
+                class="bg-yellow-500/20 text-yellow-300 px-2 py-1 rounded-full text-xs md:text-sm hover:scale-105 transition-transform"
+                >Golang</span
+              >
+              <span
+                class="bg-purple-500/20 text-purple-300 px-2 py-1 rounded-full text-xs md:text-sm hover:scale-105 transition-transform"
+                >PostgreSQL</span
+              >
+            </div>
+            <a
+              href="#"
+              class="inline-flex items-center text-blue-400 hover:text-blue-300 font-medium text-sm md:text-base group"
+            >
+              View Project
+              <i
+                class="fas fa-external-link-alt ml-1 md:ml-2 group-hover:scale-110 transition-transform"
+              ></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section
+      id="contact"
+      class="py-16 md:py-24 px-4 sm:px-6 max-w-3xl mx-auto safe-bottom"
+    >
+      <h2
+        class="text-3xl sm:text-4xl md:text-4xl font-bold mb-10 md:mb-16 text-center section-entrance"
+      >
+        <span class="gradient-text">Get In Touch</span>
+      </h2>
+
+      <!-- Contact form with animation -->
+      <form
+        class="space-y-4 md:space-y-6 card-entrance"
+        style="animation-delay: 0.2s"
+      >
+        <div class="grid md:grid-cols-2 gap-4 md:gap-6">
+          <div>
+            <input
+              type="text"
+              placeholder="Your Name"
+              class="glass-effect w-full p-3 md:p-4 rounded-lg md:rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-300 hover:scale-[1.02]"
+              required
+            />
+          </div>
+          <div>
+            <input
+              type="email"
+              placeholder="Your Email"
+              class="glass-effect w-full p-3 md:p-4 rounded-lg md:rounded-xl focus:outline-none focus:ring-2 focus:ring-purple-500 transition-all duration-300 hover:scale-[1.02]"
+              required
+            />
+          </div>
+        </div>
+        <div>
+          <input
+            type="text"
+            placeholder="Subject"
+            class="glass-effect w-full p-3 md:p-4 rounded-lg md:rounded-xl focus:outline-none focus:ring-2 focus:ring-pink-500 transition-all duration-300 hover:scale-[1.02]"
+            required
+          />
+        </div>
+        <div>
+          <textarea
+            placeholder="Your Message"
+            rows="4"
+            class="glass-effect w-full p-3 md:p-4 rounded-lg md:rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-300 hover:scale-[1.02]"
+            required
+          ></textarea>
+        </div>
+        <button
+          type="submit"
+          class="w-full bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 hover:from-blue-600 hover:via-purple-600 hover:to-pink-600 px-6 py-3 md:px-8 md:py-4 rounded-lg md:rounded-xl text-white font-semibold hover:scale-[1.02] transition-all duration-300 shimmer-btn touch-button"
+        >
+          <i class="fas fa-paper-plane mr-2"></i>Send Message
+        </button>
+      </form>
+    </section>
+
+    <!-- Footer -->
+    <footer
+      class="py-6 md:py-8 text-center text-gray-500 glass-effect-dark safe-bottom"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <div class="mb-4 md:mb-0">
+            <a href="#" class="text-xl md:text-2xl font-bold tracking-tight">
+              <span class="gradient-text">Nanda</span
+              ><span class="text-white">Surya</span>
+            </a>
+          </div>
+          <div
+            class="flex flex-wrap justify-center gap-3 md:gap-6 mb-4 md:mb-0"
+          >
+            <a
+              href="#about"
+              class="text-gray-400 hover:text-white transition text-sm md:text-base"
+              >About</a
+            >
+            <a
+              href="#skills"
+              class="text-gray-400 hover:text-white transition text-sm md:text-base"
+              >Skills</a
+            >
+            <a
+              href="#experience"
+              class="text-gray-400 hover:text-white transition text-sm md:text-base"
+              >Experience</a
+            >
+            <a
+              href="#projects"
+              class="text-gray-400 hover:text-white transition text-sm md:text-base"
+              >Projects</a
+            >
+            <a
+              href="#cv"
+              class="text-gray-400 hover:text-white transition text-sm md:text-base"
+              >CV</a
+            >
+            <a
+              href="#contact"
+              class="text-gray-400 hover:text-white transition text-sm md:text-base"
+              >Contact</a
+            >
+          </div>
+          <div class="flex space-x-4">
+            <a href="#" class="text-gray-400 hover:text-blue-400 transition">
+              <i class="fab fa-linkedin text-lg"></i>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-white transition">
+              <i class="fab fa-github text-lg"></i>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-red-400 transition">
+              <i class="fab fa-twitter text-lg"></i>
+            </a>
+          </div>
+        </div>
+        <div class="mt-6 md:mt-8 pt-6 md:pt-8 border-t border-gray-800">
+          <p class="text-sm md:text-base">
+            &copy; 2026 Nanda Surya. All rights reserved.
+          </p>
+          <p class="text-xs md:text-sm mt-2 text-gray-600">
+            Crafted with passion and modern web technologies
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button
+      id="backToTop"
+      class="fixed bottom-6 right-4 md:bottom-8 md:right-8 bg-gradient-to-r from-blue-500 to-purple-500 text-white p-2 md:p-3 rounded-full shadow-lg hover:scale-110 transition-all duration-300 opacity-0 z-50 touch-button"
+    >
+      <i class="fas fa-arrow-up text-sm md:text-base"></i>
+    </button>
+
+    <script src="script.js"></script>
+  </body>
+</html>
